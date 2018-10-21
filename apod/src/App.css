@@ -1,0 +1,42 @@
+body {
+  background: #363636;
+  color: #B2B7BA;
+}
+
+.App {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.entry-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  border: 1px solid black;
+  justify-content: space-around;
+}
+
+.entry-list .entry-card {
+  width: 400px;
+  border: 1px solid black;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.entry-list .entry-card h2 {
+  font-size: 18px;
+}
+
+.entry-list .entry-card p {
+  font-size: 12px;
+}
+
+.entry-list .entry-card img {
+  /* width: 100%; */
+  width: 400px; 
+}
+
+.entry-list .entry-card small {
+  font-size: 10px;
+}
