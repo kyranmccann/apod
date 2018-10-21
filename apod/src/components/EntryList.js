@@ -17,18 +17,18 @@ class EntryList extends React.Component {
     // }
   }
 
-  // componentDidMount(){
-  //   axios
-  //     .get(this.url)
-  //     .then(response => {
-  //       this.setState(() => ({
-  //         entries: response.data
-  //       }));
-  //     })
-  //     .catch(error => {
-  //       console.error('Sorry ', error);
-  //     })
-  // }
+  componentDidMount(){
+    axios
+      .get(this.url)
+      .then(response => {
+        this.setState(() => ({
+          entries: response.data
+        }));
+      })
+      .catch(error => {
+        console.error('Sorry ', error);
+      })
+  }
 
   render(){
     return(
