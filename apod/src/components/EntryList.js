@@ -9,8 +9,8 @@ class EntryList extends React.Component {
   constructor(props){
     super(props);
     const API_KEY = process.env.REACT_APP_APOD_API_KEY;
-    // this.url =`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=10`
-    this.url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`
+    this.url =`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=10`
+    // this.url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`
     this.state = {
       entries: [],
     }
@@ -18,7 +18,6 @@ class EntryList extends React.Component {
     // this.state = {
     //   entries: tempData,
     //   byDate: null,
-    //   today: null,
     // }
   }
 
@@ -39,11 +38,15 @@ class EntryList extends React.Component {
 
   render(){
     return(
-      <div className='entry-list'>
-        <h2>Randomly generated photos:</h2>
-        {this.state.entries.map(entry => (
-          <Entry key={entry.date} entry={entry}/>
-        ))}
+      <div className='entries-container'>
+        {!this.state.entries ? <h2>Loading photos...</h2> :
+        <div className='entry-list'>
+          <h2>Randomly generated photos:</h2>
+          {this.state.entries.map(entry => (
+            <Entry key={entry.date} entry={entry}/>
+          ))}
+        </div>}
+
       </div>
     )
   }
