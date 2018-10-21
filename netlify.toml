@@ -1,0 +1,4 @@
+[build]
+  base    = "./apod"
+  publish = "./apod/build"
+  command = "yarn build"
